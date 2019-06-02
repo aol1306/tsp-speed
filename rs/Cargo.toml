@@ -1,0 +1,8 @@
+[package]
+name = "rs"
+version = "0.1.0"
+authors = ["aol1306 <jdzieciatko@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+permutohedron = "*"
