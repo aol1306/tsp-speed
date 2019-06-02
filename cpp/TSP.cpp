@@ -66,9 +66,11 @@ double pathLength(Point& start, std::vector< Point*> & path)
 
 void bruteForceTSP(char* filename)
 {
-	auto start = std::chrono::steady_clock::now();
 	Point startPoint = Point(0, 0);
+
 	auto points = getPoints(startPoint, filename);
+
+	auto start = std::chrono::steady_clock::now();
 	const int n = points.size();
 
 	int* indexes = new int[n];

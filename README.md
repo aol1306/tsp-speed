@@ -12,10 +12,10 @@ Tests run using i7-8700 @ 3.20GHz, Win 10.
 
 |                 | Python | Cython | Golang | Rust | C++ |
 |-----------------|--------|--------|--------|------|-----|
-| run 1           | 20.47s | 14.52s | 1.88s  | 55ms |115ms|
-| run 2           | 20.81s | 14.59s | 1.88s  | 55ms |122ms|
-| run 3           | 20.24s | 14.52s | 1.88s  | 55ms |120ms|
-| average         | 20.50s | 14.54s | 1.88s  | 55ms |119ms|
+| run 1           | 20.47s | 14.52s | 1.88s  | 55ms |116ms|
+| run 2           | 20.81s | 14.59s | 1.88s  | 55ms |115ms|
+| run 3           | 20.24s | 14.52s | 1.88s  | 55ms |117ms|
+| average         | 20.50s | 14.54s | 1.88s  | 55ms |116ms|
 
 I had one case where Cython implementation ran for 26.93s with the same data, no idea what happened.
 
