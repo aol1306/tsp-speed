@@ -30,6 +30,7 @@ C# built in VS2019 - Release mode.
 * Rust: `cargo run --release -- ../coords.txt`
 * C++: `TSP.exe ../coords.txt`
 * C#: `dotnet tsp-speed.dll ../coords.txt`
+* Kotlin: `java -jar tsp.jar ../coords.txt`
 
 You can also run all programs using run.bat script.
 

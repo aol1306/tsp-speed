@@ -65,8 +65,8 @@ fn solve_brute_force() {
     });
 
     println!(
-        "Brute-force took {} s",
-        start_time.elapsed().as_micros() as f64 / 1000000.0
+        "Brute-force took {} ms",
+        start_time.elapsed().as_micros() as f64 / 1000.0
     );
 
     println!("Path: len = {}; {:?}", shortest_distance, shortest_path);

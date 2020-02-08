@@ -6,4 +6,5 @@ cargo run --release -- ..\coords.txt
 cd ..
 go run .\go\main.go .\coords.txt
 cpp\TSP.exe .\coords.txt
+java -jar kotlin\tsp.jat .\coords.txt
 pause
