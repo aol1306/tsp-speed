@@ -22,7 +22,9 @@ Tests run using i7-8700 @ 3.20GHz, Win 10.
 I had one case where Cython implementation ran for 26.93s with the same data, no idea what happened.
 
 C++ built in VS2019 - Release mode.
+
 C# built in VS2019 - Release mode.
+
 Kotlin used Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
 
 ## Running
