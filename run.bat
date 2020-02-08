@@ -4,7 +4,9 @@ dotnet .\csharp\tsp-speed.dll .\coords.txt
 cd rs
 cargo run --release -- ..\coords.txt
 cd ..
-go run .\go\main.go .\coords.txt
+cd go
+go run main.go ..\coords.txt
+cd ..
 cpp\TSP.exe .\coords.txt
-java -jar kotlin\tsp.jat .\coords.txt
+java -jar kotlin\tsp.jar .\coords.txt
 pause

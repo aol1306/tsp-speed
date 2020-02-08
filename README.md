@@ -1,8 +1,10 @@
 # TSP speed
 
-TSP brute force algorithm implemented in Python, Cython, Go, Rust, C++ and C#.
+TSP brute force algorithm implemented in Python, Cython, Go, Rust, C++, C# and Kotlin.
 
 Algorithm generates all possible permutations of given coordinate set and calculates path length. Finds best path in n! time.
+
+For supplied coordinates shortest path should be 35.1805411
 
 Please note there might be some optimizations I didn't know about / didn't care to implement.
 
@@ -10,17 +12,18 @@ Please note there might be some optimizations I didn't know about / didn't care 
 
 Tests run using i7-8700 @ 3.20GHz, Win 10.
 
-|                 | Python | Cython | Golang | Rust | C++ |  C#  |
-|-----------------|--------|--------|--------|------|-----|------|
-| run 1           | 20.47s | 14.52s | 1.88s  | 55ms |116ms|1297ms|
-| run 2           | 20.81s | 14.59s | 1.88s  | 55ms |115ms|1280ms|
-| run 3           | 20.24s | 14.52s | 1.88s  | 55ms |117ms|1294ms|
-| average         | 20.50s | 14.54s | 1.88s  | 55ms |116ms|1290ms|
+|                 | Python | Cython | Go 1.13 |  C#  |Kotlin| C++ | Rust 1.41 |
+|-----------------|--------|--------|---------|------|------|-----|-----------|
+| run 1           | 20.47s | 14.52s | 1874ms  |1297ms|1170ms|116ms|    55ms   |
+| run 2           | 20.81s | 14.59s | 1872ms  |1280ms|1145ms|115ms|    55ms   |
+| run 3           | 20.24s | 14.52s | 1876ms  |1294ms|1155ms|117ms|    55ms   |
+| average         | 20.50s | 14.54s | 1874ms  |1290ms|1157ms|116ms|    55ms   |
 
 I had one case where Cython implementation ran for 26.93s with the same data, no idea what happened.
 
 C++ built in VS2019 - Release mode.
 C# built in VS2019 - Release mode.
+Kotlin used Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
 
 ## Running
 
