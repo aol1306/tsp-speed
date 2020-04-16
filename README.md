@@ -46,4 +46,4 @@ Repo includes Cython extention built for Windows.
 To build for a different system, run `python setup.py build_ext --inplace`
 
 ## Credits
-* Marcel Mikołajko for C++ implementation
+* Marcel Mikołajko for C++ and Julia implementation
