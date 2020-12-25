@@ -29,6 +29,12 @@ Kotlin used Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
 
 ## Running
 
+### Docker
+
+Use run-docker.sh script to run all benchmarks in docker.
+
+### Manually
+
 * Python: `python main.py ../coords.txt`
 * Cython: `python main.py ../coords.txt`
 * Go: `go run main.go ../coords.txt`
