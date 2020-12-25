@@ -19,13 +19,20 @@ Tests run using i7-8700 @ 3.20GHz, Win 10.
 | run 3           | 20.24s | 14.52s | 1876ms  |1294ms|1155ms|117ms|    55ms   |
 | average         | 20.50s | 14.54s | 1874ms  |1290ms|1157ms|116ms|    55ms   |
 
-I had one case where Cython implementation ran for 26.93s with the same data, no idea what happened.
-
 C++ built in VS2019 - Release mode.
 
 C# built in VS2019 - Release mode.
 
 Kotlin used Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
+
+Tests run using Apple M1 on MacBook Air, using Docker (run-docker.sh).
+
+|           | Python | Rust  | Go   | Javascript | Julia | Kotlin | Cython | C++ | C#   |
+|-----------|--------|-------|------|------------|-------|--------|--------|-----|------|
+| run 1     | 9066ms |26.47ms|1309ms| 1814ms     |40.15ms|1077ms  |6076ms  |42ms |1238ms|
+| run 2     | 9212ms |26.41ms|1316ms| 1822ms     |40.13ms|1075ms  |6372ms  |44ms |1240ms|
+| run 3     | 9224ms |26.53ms|1311ms| 1819ms     |40.14ms|1102ms  |6168ms  |44ms |1249ms|
+| average   | 9167ms |26.47ms|1312ms| 1818ms     |40.14ms|1085ms  |6205ms  |43ms |1242ms|
 
 ## Running
 
