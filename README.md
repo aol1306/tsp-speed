@@ -36,9 +36,9 @@ Tests run using Apple M1 on MacBook Air, using Docker (run-docker.sh).
 
 DigitalOcean's s-1vcpu-1gb instance, Intel(R) Xeon(R) CPU E5-2650L v3 @ 1.80GHz, Debian 10
 
-| Python | Javascript | Go   | C#   | Kotlin | C++ | Julia | Rust  |
+| Python | Javascript | Go   | C#   | Kotlin | C++ | Rust  | Julia |
 |--------|------------|------|------|--------|-----|-------|-------|
-| 55947ms| 7837ms     |6710ms|6346ms|6167ms  |385ms|247ms  | 371ms |
+| 55947ms| 7837ms     |6710ms|6346ms|6167ms  |385ms| 371ms |247ms  |
 
 ## Running
 
