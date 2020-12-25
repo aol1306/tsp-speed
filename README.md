@@ -27,12 +27,18 @@ Kotlin used Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
 
 Tests run using Apple M1 on MacBook Air, using Docker (run-docker.sh).
 
-|           | Python | Rust  | Go   | Javascript | Julia | Kotlin | Cython | C++ | C#   |
-|-----------|--------|-------|------|------------|-------|--------|--------|-----|------|
-| run 1     | 9066ms |26.47ms|1309ms| 1814ms     |40.15ms|1077ms  |6076ms  |42ms |1238ms|
-| run 2     | 9212ms |26.41ms|1316ms| 1822ms     |40.13ms|1075ms  |6372ms  |44ms |1240ms|
-| run 3     | 9224ms |26.53ms|1311ms| 1819ms     |40.14ms|1102ms  |6168ms  |44ms |1249ms|
-| average   | 9167ms |26.47ms|1312ms| 1818ms     |40.14ms|1085ms  |6205ms  |43ms |1242ms|
+|           | Python | Cython | Javascript | Go   | C#   | Kotlin | C++ | Julia | Rust  |
+|-----------|--------|--------|------------|------|------|--------|-----|-------|-------|
+| run 1     | 9066ms |5466ms  | 1814ms     |1309ms|1238ms|1077ms  |42ms |40.15ms|26.47ms|
+| run 2     | 9212ms |5553ms  | 1822ms     |1316ms|1240ms|1075ms  |44ms |40.13ms|26.41ms|
+| run 3     | 9224ms |5615ms  | 1819ms     |1311ms|1249ms|1102ms  |44ms |40.14ms|26.53ms|
+| average   | 9167ms |5545ms  | 1818ms     |1312ms|1242ms|1085ms  |43ms |40.14ms|26.47ms|
+
+DigitalOcean's s-1vcpu-1gb instance, Intel(R) Xeon(R) CPU E5-2650L v3 @ 1.80GHz, Debian 10
+
+| Python | Javascript | Go   | C#   | Kotlin | C++ | Julia | Rust  |
+|--------|------------|------|------|--------|-----|-------|-------|
+| 55947ms| 7837ms     |6710ms|6346ms|6167ms  |385ms|247ms  | 371ms |
 
 ## Running
 
