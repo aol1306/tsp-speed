@@ -40,6 +40,36 @@ DigitalOcean's s-1vcpu-1gb instance, Intel(R) Xeon(R) CPU E5-2650L v3 @ 1.80GHz,
 |--------|------------|------|------|--------|-----|-------|-------|
 | 55947ms| 7837ms     |6710ms|6346ms|6167ms  |385ms| 371ms |247ms  |
 
+Raspberry Pi 4 Model B Rev 1.2, A72 @ 1.5GHz
+
+| Python | Ruby 3 JIT | Javascript | C#    | Go    | C++ | Rust  |
+|--------|------------|------------|-------|-------|-----|-------|
+| 92303ms| 46510ms    | 13615ms    |13248ms|12421ms|789ms| 652ms |
+
+GCP n1-standard-1 instance, Intel(R) Xeon(R) CPU @ 2.30GHz, Debian 10
+
+| Python | Ruby 3 JIT | Javascript | C#    | Go    | Kotlin | Julia | C++ | Rust  |
+|--------|------------|------------|-------|-------|--------|-------|-----|-------|
+|26695ms |  10947ms   | 3717ms     | 3035ms| 2757ms| 2486ms | 131ms |104ms|91ms   |
+
+GCP n2-highcpu-2 instance, Intel(R) Xeon(R) CPU @ 2.80GHz, Debian 10
+
+| Python | Ruby 3 JIT | Javascript | C#    | Go    | Kotlin | Julia | C++ | Rust  |
+|--------|------------|------------|-------|-------|--------|-------|-----|-------|
+|20638ms |  8502ms    | 3005ms     | 2083ms| 2160ms| 2006ms | 105ms |82ms |70ms   |
+
+GCP n2d-highcpu-2 instance, AMD EPYC 7B12 @ 2.25GHz, Debian 10
+
+| Python | Ruby 3 JIT | Javascript | C#    | Go    | Kotlin | Julia | Rust | C++  |
+|--------|------------|------------|-------|-------|--------|-------|------|------|
+| 23879ms|   13905ms  |   2917ms   |2389ms | 2737ms| 2246ms |  129ms|109ms | 108ms|
+
+GCP free tier f1-micro instance, Intel(R) Xeon(R) CPU @ 2.30GHz, Debian 10
+
+| Python | Ruby 3 JIT | Javascript | C#    | Go    | Kotlin | Julia | C++  | Rust |
+|--------|------------|------------|-------|-------|--------|-------|------|------|
+| 26345ms|   11343ms  |   3894ms   | 2967ms| 2730ms| 2469ms |crashed| 104ms|90ms  |
+
 ## Running
 
 ### Docker
