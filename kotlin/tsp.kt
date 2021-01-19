@@ -5,7 +5,6 @@ import java.io.File
 data class Point(val x: Double, val y: Double)
 
 fun getPoints(filename: String): ArrayList<Point> {
-    println("Reading from $filename")
     var ret = ArrayList<Point>()
     File(filename).forEachLine {
         val s = it.split(",")
@@ -72,15 +71,11 @@ fun bruteForceTSP(filename: String)
         }
     }
     val execTime = System.currentTimeMillis() - start
-    println("Shortest length: $shortestLength")
-    println("Shortest path: $shortestPath")
-    println("Time: $execTime ms")
+    println("{\"lang\" : \"kotlin\", \"time\" : $execTime, \"distance\" :  $shortestLength}")
 }
 
 fun main(args: Array<String>)
 {
-    println("Kotlin (JVM)")
-
     if (args.size < 1) {
         println("Please provide filename as argument")
         return

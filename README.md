@@ -72,27 +72,7 @@ GCP free tier f1-micro instance, Intel(R) Xeon(R) CPU @ 2.30GHz, Debian 10
 
 ## Running
 
-### Docker
-
 Use run-docker.sh script to run all benchmarks in docker.
-
-### Manually
-
-* Python: `python main.py ../coords.txt`
-* Cython: `python main.py ../coords.txt`
-* Go: `go run main.go ../coords.txt`
-* Rust: `cargo run --release -- ../coords.txt`
-* C++: `TSP.exe ../coords.txt`
-* C#: `dotnet tsp-speed.dll ../coords.txt`
-* Kotlin: `java -jar tsp.jar ../coords.txt`
-
-You can also run all programs using run.bat script.
-
-## Cython notes
-
-Repo includes Cython extention built for Windows.
-
-To build for a different system, run `python setup.py build_ext --inplace`
 
 ## Credits
 * Marcel Mikołajko for C++ and Julia implementation

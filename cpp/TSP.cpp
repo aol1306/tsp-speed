@@ -1,4 +1,4 @@
-﻿#include <cmath>
+#include <cmath>
 #include <vector>
 #include <algorithm>
 #include <iostream>
@@ -104,14 +104,11 @@ void bruteForceTSP(char* filename)
 		}
 	}
 	auto duration = std::chrono::steady_clock::now() - start;
-	std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() << "ms" << std::endl;
-	std::cout << "Shortest length: " << shortestLength << std::endl;
+	std::cout << "{\"lang\" : \"cpp\", \"time\" : "<< std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() << ", \"distance\" : " << shortestLength << "}" << std::endl;
 }
 
 int main(int argc, char** argv)
 {
-	std::cout << "C++" << std::endl;
-
 	if (argc < 2) {
 		std::cout << "Usage: ./main [filename]" << std::endl;
 		exit(-1);
@@ -119,6 +116,5 @@ int main(int argc, char** argv)
 
 	bruteForceTSP(argv[1]);
 
-	system("pause");
 	return 0;
 }

@@ -50,13 +50,10 @@ def solve_brute_force()
     end
 
     end_t = Time.now
-    puts "Brute-force took #{end_t - start_t} seconds"
 
     # print results
-    puts "Shortest path is #{shortest_path}"
-    puts "Distance: #{shortest_distance}"
+    puts "{\"lang\" : \"ruby\", \"time\": #{(end_t - start_t) * 1000}, \"distance\": #{shortest_distance}}"
 end
 
 
-puts "ruby"
 solve_brute_force

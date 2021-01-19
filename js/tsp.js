@@ -67,8 +67,10 @@ fs.readFile(process.argv[2], 'utf-8', (err, data) => {
         }
     }
 
-    console.log("Elapsed: " + (Date.now() - start) + "ms")
-    console.log("Shortest length: " + shortestLength)
-    console.log("Shortest path: ")
-    console.log(shortestPath)
+    result = {
+        'lang' : 'js',
+        'time' : Date.now() - start,
+        'distance' : shortestLength
+    }
+    console.log(JSON.stringify(result))
 })

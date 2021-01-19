@@ -1,5 +1,6 @@
 using ResumableFunctions
 using BenchmarkTools
+using Dates
 
 struct Point
     x::Float32
@@ -59,11 +60,16 @@ function main()
     startPoint::Point = Point(3,4)
     points = Point[ Point(1,2), Point(5,6), Point(9,2), Point(0,3), Point(7,3), Point(2,7), Point(5,5), Point(1,3), Point(0,-4), Point(2,2) ]
     shortest::Float32 = 0.0
+
+    startTime = Dates.now()
     shortest = bruteForceTSP(points, startPoint)
-    @btime bruteForceTSP($points, $startPoint)
-    @btime bruteForceTSP($points, $startPoint)
-    @btime bruteForceTSP($points, $startPoint)
-    print(shortest)
+    endTime = Dates.now()
+
+    #@btime bruteForceTSP($points, $startPoint)
+
+    timeMs = Dates.value(convert(Dates.Millisecond, endTime - startTime))
+
+    println("{\"lang\" : \"julia\", \"time\" : ", timeMs, ", \"distance\" : ", shortest, "}")
 
     # @profile shortest = bruteForceTSP(points, startPoint)
     # Profile.print()

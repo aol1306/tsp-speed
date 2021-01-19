@@ -65,14 +65,12 @@ fn solve_brute_force() {
     });
 
     println!(
-        "Brute-force took {} ms",
-        start_time.elapsed().as_micros() as f64 / 1000.0
+        "{{\"lang\" : \"rs\", \"time\": {}, \"distance\": {}}}",
+        start_time.elapsed().as_micros() as f64 / 1000.0,
+        shortest_distance
     );
-
-    println!("Path: len = {}; {:?}", shortest_distance, shortest_path);
 }
 
 fn main() {
-	println!("rust");
     solve_brute_force();
 }

@@ -3,6 +3,7 @@ import itertools
 import math
 import sys
 import time
+import json
 
 # euclidean
 def distance_f(a, b):
@@ -46,13 +47,14 @@ def solve_brute_force():
             shortest_path = path
 
     end_t = time.time()
-    print("Brute-force took " + str((end_t - start_t))+ " seconds")
+    #print("Brute-force took " + str((end_t - start_t))+ " seconds")
 
     # add starting point to the front and end (aesthetics)
     # print results
-    print("Shortest path is", (start,)+shortest_path+(start,))
-    print("Distance:", shortest_distance)
+    #print("Shortest path is", (start,)+shortest_path+(start,))
+    #print("Distance:", shortest_distance)
+    result = {'lang': 'py', 'time': int((end_t-start_t)*1000), 'distance': shortest_distance}
+    print(json.dumps(result))
 
 
-print("python")
 solve_brute_force()

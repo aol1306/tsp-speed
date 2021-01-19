@@ -90,8 +90,7 @@ namespace tsp_speed
 
             start.Stop();
             var elapsedMs = start.ElapsedMilliseconds;
-            Console.WriteLine("Elapsed: " + elapsedMs + "ms");
-            Console.WriteLine("Shortest length: " + shortestLength);
+            Console.WriteLine("{\"lang\" : \"csharp\", \"time\" : " + elapsedMs + ", \"distance\" : " + shortestLength + "}");
         }
 
         static void Main(string[] args)

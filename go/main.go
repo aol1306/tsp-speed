@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"math"
 	"os"
@@ -87,14 +88,11 @@ func solveBruteForce() {
 		}
 	}
 
+	_ = shortestPath
 	elapsed := time.Since(startTime)
-	log.Printf("Execution took %s", elapsed)
-
-	log.Println("Path len", shortestDistance)
-	log.Println(shortestPath)
+	fmt.Printf("{\"lang\" : \"go\", \"time\": %v, \"distance\": %v}\n", elapsed.Milliseconds(), shortestDistance)
 }
 
 func main() {
-	log.Println("golang")
 	solveBruteForce()
 }
