@@ -11,6 +11,7 @@ docker build cython -t tsp-speed-cython
 docker build cpp -t tsp-speed-cpp
 docker build csharp -t tsp-speed-csharp
 docker build ruby -t tsp-speed-ruby
+docker build scala -t tsp-speed-scala
 
 docker run --rm -it tsp-speed-py
 docker run --rm -it tsp-speed-rs
@@ -22,3 +23,4 @@ docker run --rm -it tsp-speed-cython
 docker run --rm -it tsp-speed-cpp
 docker run --rm -it tsp-speed-csharp
 docker run --rm -it tsp-speed-ruby
+docker run --rm -it tsp-speed-scala
