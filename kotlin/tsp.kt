@@ -18,7 +18,7 @@ fun euclideanDistance(a: Point, b: Point): Double {
 	return Math.sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y))
 }
 
-fun pathLength(start: Point, path: ArrayList<Point>): Double {
+fun pathLength(start: Point, path: Array<Point>): Double {
 	var length = 0.0;
 	length += euclideanDistance(start, path.get(0));
 	for (i in 1..path.size-1)
@@ -31,18 +31,15 @@ fun pathLength(start: Point, path: ArrayList<Point>): Double {
 
 fun bruteForceTSP(filename: String)
 {
-	var points = getPoints(filename)
+	var points: Array<Point> = getPoints(filename).toTypedArray()
     var startPoint = points[0]
 
     val start = System.currentTimeMillis()
     val n = points.size
 
-    var indexes = ArrayList<Int>()
-    for (i in 0..n) {
-        indexes.add(0)
-    }
+    var indexes = Array<Int>(n) { 0 }
 
-    var shortestPath: ArrayList<Point> = points
+    var shortestPath: Array<Point> = points
     var shortestLength = pathLength(startPoint, points)
 
     var i = 0
