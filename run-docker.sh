@@ -13,6 +13,8 @@ docker build csharp -t tsp-speed-csharp
 docker build ruby -t tsp-speed-ruby
 docker build scala -t tsp-speed-scala
 
+set +x
+
 docker run --rm -it tsp-speed-py
 docker run --rm -it tsp-speed-rs
 docker run --rm -it tsp-speed-go
