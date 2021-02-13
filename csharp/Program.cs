@@ -21,15 +21,15 @@ namespace tsp_speed
             return Math.Sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
             //return Math.Sqrt(Math.Pow(a.x - b.x, 2) + Math.Pow(a.y - b.y, 2)); // makes it 10 times slower
         }
-        static double PathLength(Point start, List<Point> path)
+        static double PathLength(Point start, Point[] path)
         {
             double length = 0;
             length += DistanceF(start, path[0]);
-            for (int i=1; i< path.Count; ++i)
+            for (int i=1; i< path.Length; ++i)
             {
                 length += DistanceF(path[i - 1], path[i]);
             }
-            length += DistanceF(path[path.Count - 1], start);
+            length += DistanceF(path[path.Length - 1], start);
             return length;
         }
 
@@ -49,15 +49,15 @@ namespace tsp_speed
 
         static void BruteForceTSP(String filename)
         {
-            var points = GetPoints(filename);
+            var points = GetPoints(filename).ToArray();
 
             var start = System.Diagnostics.Stopwatch.StartNew();
 
-            var n = points.Count;
-            var indexes = new List<int>();
+            var n = points.Length;
+            var indexes = new int[n];
             for (int j=0; j<n; j++)
             {
-                indexes.Add(0);
+                indexes[j] = 0;
             }
 
             var shortestPath = points;
@@ -104,34 +104,3 @@ namespace tsp_speed
         }
     }
 }
-
-/*
-
- * 
-Point* fromFile(std::string line) {
-	std::stringstream s(line);
-	std::string x, y;
-	std::getline(s, x, ',');
-	std::getline(s, y, ',');
-	return new Point(std::stod(x), std::stod(y));
-}
-
-std::vector< Point* > getPoints(Point & start, char *filename)
-{
-	std::vector<Point*> ret;
-	std::fstream f;
-	f.open(filename);
-	if (f.is_open()) {
-		std::string s;
-		f >> s;
-		start = *fromFile(s);
-		while (!f.eof()) {
-			std::string s;
-			f >> s;
-			if (s.empty()) break;
-			ret.push_back(fromFile(s));
-		}
-	}
-	return ret;
-}
-*/
