@@ -24,6 +24,7 @@ Tests run using Apple M1 on MacBook Air, using Docker (run-docker.sh).
 {"lang" : "csharp", "time" : 1145, "distance" : 35.18054110918435}
 {"lang" : "ruby", "time": 3598.095294, "distance": 35.18054110918435}
 {"lang" : "scala", "time" : 591, "distance" :  35.18054110918435}
+{"lang" : "java", "time" : 501, "distance" :  35.18054110918435}
 ```
 
 ## Running

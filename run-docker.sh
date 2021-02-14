@@ -12,6 +12,7 @@ docker build cpp -t tsp-speed-cpp
 docker build csharp -t tsp-speed-csharp
 docker build ruby -t tsp-speed-ruby
 docker build scala -t tsp-speed-scala
+docker build java -t tsp-speed-java
 
 set +x
 
@@ -26,3 +27,4 @@ docker run --rm -it tsp-speed-cpp
 docker run --rm -it tsp-speed-csharp
 docker run --rm -it tsp-speed-ruby
 docker run --rm -it tsp-speed-scala
+docker run --rm -it tsp-speed-java
