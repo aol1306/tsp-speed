@@ -6,4 +6,4 @@ RUN apt update && \
 
 COPY . .
 RUN javac tsp.java
-CMD ["java", "Tsp", "coords.txt"]
+CMD ["java", "-XX:+UseParallelGC", "Tsp", "coords.txt"]
