@@ -13,18 +13,19 @@ Please note there might be some optimizations I didn't know about / didn't care 
 Tests run using Apple M1 on MacBook Air, using Docker (run-docker.sh).
 
 ```json
-{"lang": "py", "time": 9308, "distance": 35.18054110918435}
-{"lang" : "rs", "time": 26.236, "distance": 35.18054110918435}
-{"lang" : "go", "time": 1302, "distance": 35.18054110918435}
-{"lang":"js","time":1815,"distance":35.18054110918435}
-{"lang" : "julia", "time" : 41, "distance" : 35.180542}
-{"lang" : "kotlin", "time" : 612, "distance" :  35.18054110918435}
-{"lang": "cython", "time": 5413, "distance": 35.18054110918435}
-{"lang" : "cpp", "time" : 43, "distance" : 35.1805}
-{"lang" : "csharp", "time" : 1145, "distance" : 35.18054110918435}
-{"lang" : "ruby", "time": 3598.095294, "distance": 35.18054110918435}
-{"lang" : "scala", "time" : 591, "distance" :  35.18054110918435}
-{"lang" : "java", "time" : 422, "distance" :  35.18054110918435}
+{"lang": "py", "time": 9193, "distance": 35.18054110918435}
+{"lang": "pypy", "time": 327, "distance": 35.18054110918435}
+{"lang" : "rs", "time": 26.667, "distance": 35.18054110918435}
+{"lang" : "go", "time": 1276, "distance": 35.18054110918435}
+{"lang":"js","time":1841,"distance":35.18054110918435}
+{"lang" : "julia", "time" : 40, "distance" : 35.180542}
+{"lang" : "kotlin", "time" : 610, "distance" :  35.18054110918435}
+{"lang": "cython", "time": 5360, "distance": 35.18054110918435}
+{"lang" : "cpp", "time" : 39, "distance" : 35.1805}
+{"lang" : "csharp", "time" : 1151, "distance" : 35.18054110918435}
+{"lang" : "ruby", "time": 3648.0811270000004, "distance": 35.18054110918435}
+{"lang" : "scala", "time" : 616, "distance" :  35.18054110918435}
+{"lang" : "java", "time" : 472, "distance" :  35.18054110918435}
 ```
 
 ## Running

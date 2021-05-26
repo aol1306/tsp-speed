@@ -2,6 +2,7 @@
 set -eux
 
 docker build py -t tsp-speed-py
+docker build pypy -t tsp-speed-pypy
 docker build rs -t tsp-speed-rs
 docker build go -t tsp-speed-go
 docker build js -t tsp-speed-js
@@ -17,6 +18,7 @@ docker build java -t tsp-speed-java
 set +x
 
 docker run --rm -it tsp-speed-py
+docker run --rm -it tsp-speed-pypy
 docker run --rm -it tsp-speed-rs
 docker run --rm -it tsp-speed-go
 docker run --rm -it tsp-speed-js
