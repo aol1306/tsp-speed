@@ -11,9 +11,10 @@ function getPoints(data) {
     var coords = []
     for (var i in coordsRaw) {
         var split = coordsRaw[i].split(',')
-        var c = []
-        c.x = parseInt(split[0])
-        c.y = parseInt(split[1])
+        var c = {
+            x: parseInt(split[0]),
+            y: parseInt(split[1]),
+        }
         coords.push(c)
     }
     return coords

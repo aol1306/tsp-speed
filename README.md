@@ -17,7 +17,7 @@ Tests run using Apple M1 on MacBook Air, using Docker (run-docker.sh).
 {"lang": "pypy", "time": 325, "distance": 35.18054110918435}
 {"lang" : "rs", "time": 116.864, "distance": 35.18054110918435}
 {"lang" : "go", "time": 1283, "distance": 35.18054110918435}
-{"lang":"js","time":1839,"distance":35.18054110918435}
+{"lang":"js","time":1400,"distance":35.18054110918435}
 {"lang" : "julia", "time" : 39, "distance" : 35.180542}
 {"lang" : "kotlin", "time" : 611, "distance" :  35.18054110918435}
 {"lang": "cython", "time": 5460, "distance": 35.18054110918435}
