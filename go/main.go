@@ -9,8 +9,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-
-	prmt "github.com/gitchander/permutation"
 )
 
 type coord struct {
@@ -20,20 +18,20 @@ type coord struct {
 
 type coordSlice []coord
 
-func (ps coordSlice) Len() int      { return len(ps) }
-func (ps coordSlice) Swap(i, j int) { ps[i], ps[j] = ps[j], ps[i] }
+func (ps *coordSlice) Len() int      { return len(*ps) }
+func (ps *coordSlice) Swap(i, j int) { (*ps)[i], (*ps)[j] = (*ps)[j], (*ps)[i] }
 
 func distanceF(a *coord, b *coord) float64 {
-	return math.Sqrt(math.Pow(a.x-b.x, 2) + math.Pow(a.y-b.y, 2))
+	return math.Sqrt((a.x-b.x) * (a.x-b.x) + (a.y-b.y) * (a.y-b.y))
 }
 
-func calculateDistance(start *coord, coords coordSlice) float64 {
+func calculateDistance(start *coord, coords *coordSlice) float64 {
 	distance := 0.0
-	distance += distanceF(start, &coords[0])
-	for i := 1; i < len(coords); i++ {
-		distance += distanceF(&coords[i-1], &coords[i])
+	distance += distanceF(start, &(*coords)[0])
+	for i := 1; i < len(*coords); i++ {
+		distance += distanceF(&(*coords)[i-1], &(*coords)[i])
 	}
-	distance += distanceF(&coords[len(coords)-1], start)
+	distance += distanceF(&(*coords)[len(*coords)-1], start)
 	return distance
 }
 
@@ -77,15 +75,33 @@ func solveBruteForce() {
 	start, coords := coords[0], coords[1:]
 
 	shortestPath := coords
-	shortestDistance := calculateDistance(&start, coords)
+	shortestDistance := calculateDistance(&start, &coords)
 
-	p := prmt.New(coords)
-	for p.Next() {
-		currentDistance := calculateDistance(&start, coords)
-		if currentDistance < shortestDistance {
-			shortestDistance = currentDistance
-			shortestPath = coords
-		}
+    n := len(coords)
+    i := 0
+    indexes := make([]int, n)
+
+    for i < n {
+        if indexes[i] < i {
+            toSwapIndex := 0;
+            if !(i % 2 == 0) {
+                toSwapIndex = indexes[i];
+            }
+            tmp := coords[toSwapIndex];
+            coords[toSwapIndex] = coords[i];
+            coords[i] = tmp;
+
+            currentDistance := calculateDistance(&start, &coords)
+            if currentDistance < shortestDistance {
+                shortestDistance = currentDistance
+                shortestPath = coords
+            }
+            indexes[i]++;
+            i = 0;
+        } else {
+            indexes[i] = 0;
+            i++;
+        }
 	}
 
 	_ = shortestPath
